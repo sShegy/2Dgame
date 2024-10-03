@@ -1,7 +1,7 @@
 package main;
 
 import entity.Player;
-import tile.TileMenager;
+import tile.TileManager;
 
 import java.awt.*;
 import javax.swing.JPanel;
@@ -28,7 +28,7 @@ public class GameBanner extends JPanel implements Runnable{
 
     //FPS
     int FPS=60;
-    TileMenager tileMenager=new TileMenager(this);
+    TileManager tileMenager=new TileManager(this);
     Player player=new Player(this,keyH);
     Thread gameThread;
     public GameBanner()
