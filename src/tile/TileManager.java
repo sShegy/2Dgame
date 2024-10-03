@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class TileManager {  // Corrected the spelling to TileManager
+public class TileManager {
     GameBanner gp;
     Tile[] tile;
     int[][] mapTileNum;
@@ -18,13 +18,13 @@ public class TileManager {  // Corrected the spelling to TileManager
         this.gp = gp;
         tile = new Tile[10];
         mapTileNum = new int[gp.maxScreenCol][gp.maxScreenRow];
-        getTileImage();  // Corrected the method name
+        getTileImage();
         loadMap();
     }
 
     public void loadMap() {
         try {
-            InputStream is = getClass().getResourceAsStream("/res/player/maps/wrld2.txt");  // Corrected resource path
+            InputStream is = getClass().getResourceAsStream("/res/player/maps/wrld2.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int col = 0;
@@ -44,11 +44,11 @@ public class TileManager {  // Corrected the spelling to TileManager
             }
             br.close();
         } catch (Exception e) {
-            e.printStackTrace();  // Log the error for debugging
+            e.printStackTrace();
         }
     }
 
-    public void getTileImage() {  // Corrected the method name
+    public void getTileImage() {
         try {
             tile[0] = new Tile();
             tile[0].image = ImageIO.read(getClass().getResourceAsStream("/res/player/tiles/grass.png"));
@@ -59,7 +59,7 @@ public class TileManager {  // Corrected the spelling to TileManager
             tile[2] = new Tile();
             tile[2].image = ImageIO.read(getClass().getResourceAsStream("/res/player/tiles/water.png"));
         } catch (IOException e) {
-            e.printStackTrace();  // Log the error for debugging
+            e.printStackTrace();
         }
     }
 
@@ -70,7 +70,7 @@ public class TileManager {  // Corrected the spelling to TileManager
         int y = 0;
 
         while (col < gp.maxScreenCol && row < gp.maxScreenRow) {
-            int tileNum = mapTileNum[col][row];  // Simplified variable name to tileNum
+            int tileNum = mapTileNum[col][row];
             g2.drawImage(tile[tileNum].image, x, y, gp.tileSize, gp.tileSize, null);
             col++;
             x += gp.tileSize;
