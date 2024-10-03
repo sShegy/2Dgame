@@ -21,9 +21,9 @@ public class GameBanner extends JPanel implements Runnable{
     KeyHadnler keyH=new KeyHadnler();
 
     //set players default position
-    int playerX=100;
-    int playerY =100;
-    int playerSpeed=4;
+//    int playerX=100;
+//    int playerY =100;
+//    int playerSpeed=4;
 
     //FPS
     int FPS=60;
