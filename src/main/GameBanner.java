@@ -28,9 +28,13 @@ public class GameBanner extends JPanel implements Runnable{
 
     //FPS
     int FPS=60;
+    //Map
     TileManager tileMenager=new TileManager(this);
+    //Player
     Player player=new Player(this,keyH);
+    //Time
     Thread gameThread;
+
     public GameBanner()
     {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -38,8 +42,6 @@ public class GameBanner extends JPanel implements Runnable{
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
-
-
     }
 
 
@@ -107,7 +109,6 @@ public class GameBanner extends JPanel implements Runnable{
     }
     public void update(){
         player.update();
-
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
