@@ -11,7 +11,7 @@ public class Main {
         JFrame window=new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
-        window.setTitle("2D adveture");
+        window.setTitle("2D adventure");
 
         Image Logo = ImageIO.read(new File("C:\\Users\\Shegy\\Desktop\\2Dgame\\res\\player\\Logo.jpg"));
         window.setIconImage(Logo);
