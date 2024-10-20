@@ -41,6 +41,8 @@ public class GameBanner extends JPanel implements Runnable{
     public Player player=new Player(this,keyH);
     //Time
     Thread gameThread;
+    //Collison Checeker
+    public CollisionChecker collisionChecker=new CollisionChecker(this);
 
     public GameBanner()
     {
