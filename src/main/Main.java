@@ -13,8 +13,8 @@ public class Main {
         window.setResizable(false);
         window.setTitle("2D adventure");
 
-        Image Logo = ImageIO.read(new File("C:\\Users\\Shegy\\Desktop\\2Dgame\\res\\player\\Logo.jpg"));
-        window.setIconImage(Logo);
+        //Image Logo = ImageIO.read(new File("C:\\Users\\Shegy\\Desktop\\2Dgame\\res\\player\\Logo.jpg"));
+        //window.setIconImage(Logo);
 
         GameBanner gameBanner=new GameBanner();
         window.add(gameBanner);
