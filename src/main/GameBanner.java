@@ -1,6 +1,7 @@
 package main;
 
 import entity.Player;
+import object.SuperObject;
 import tile.TileManager;
 
 import java.awt.*;
@@ -39,6 +40,8 @@ public class GameBanner extends JPanel implements Runnable{
     TileManager tileMenager=new TileManager(this);
     //Player
     public Player player=new Player(this,keyH);
+    //Objects
+    public SuperObject obj[]=new SuperObject[10]; //10 means 10 slots like in minecraft
     //Time
     Thread gameThread;
     //Collison Checeker
