@@ -42,6 +42,8 @@ public class GameBanner extends JPanel implements Runnable{
     public Player player=new Player(this,keyH);
     //Objects
     public SuperObject obj[]=new SuperObject[10]; //10 means 10 slots like in minecraft
+    //Assets
+    public  AssetSetter assetSetter=new AssetSetter(this);
     //Time
     Thread gameThread;
     //Collison Checeker
@@ -55,7 +57,10 @@ public class GameBanner extends JPanel implements Runnable{
         this.addKeyListener(keyH);
         this.setFocusable(true);
     }
-
+    public  void setUpGame()
+    {
+            assetSetter.setObject();
+    }
 
 
     public void  startGameThread(){
@@ -127,6 +132,14 @@ public class GameBanner extends JPanel implements Runnable{
 
         Graphics2D g2=(Graphics2D)g;
         tileMenager.draw(g2);
+
+        for (int i = 0; i < obj.length; i++){
+            if (obj[i]!=null){
+                obj[i].draw(g2,this);
+            }
+        }
+
+
         player.draw(g2);
         g2.dispose();
     }

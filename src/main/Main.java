@@ -20,9 +20,12 @@ public class Main {
         window.add(gameBanner);
         window.pack();
 
-        gameBanner.startGameThread();
+
 
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+
+        gameBanner.setUpGame();
+        gameBanner.startGameThread();
     }
 }
